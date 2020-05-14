@@ -16,12 +16,16 @@ class Controller extends BaseController
         //追加
         $count_followings = $user->followings()->count();
         $count_followers = $user->followers()->count();
+        //追加
+        $count_favorites = $user->favorites()->count();
 
         return [
             'count_microposts' => $count_microposts,
             //追加
             'count_followings' => $count_followings,
             'count_followers' => $count_followers,
+            //追加
+            'count_favorites' => $count_favorites,
         ];
     }
 }
